@@ -1,11 +1,18 @@
 import * as React from 'react'
 import { useState } from "react";
 import axios from "axios";
+import PieApp from '../components/PieApp';
+import {
+  PieChart,
+  Pie,
+  Tooltip,
+} from "recharts";
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
   const [pokemonData, setPokemonData] = useState([]);
   const [pokemonType, setPokemonType] = useState("");
+  
 
   const handleChange = (e) => {
     setPokemon(e.target.value.toLowerCase());
@@ -28,6 +35,7 @@ const App = () => {
   };
   console.log(pokemonData);
 
+
   return (
     <div className="App">
       <form onSubmit={handleSubmit}>
@@ -41,6 +49,7 @@ const App = () => {
       </form>
       
       {pokemonData.map((data) => {
+        
         return (
           <div>
             <img src={data.sprites["front_default"]} />
@@ -48,11 +57,13 @@ const App = () => {
                 <li>Type: {pokemonType}</li>
                 <li>Height: {Math.round(data.height * 3.9)} inches</li>
                 <li>Weight: {Math.round(data.weight / 4.3)} lbs</li>
-                <li>Battles: {data.game_indices.length}</li>
+                <li>XP: {data.base_experience}</li>
             </ul>
+            <PieApp weight={data.weight} height={data.height} XP={data.base_experience}/>
           </div>
         );
-      })}
+      })}   
+      
     </div>
   );
 };
