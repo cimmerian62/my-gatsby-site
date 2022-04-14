@@ -2,11 +2,7 @@ import * as React from 'react'
 import { useState } from "react";
 import axios from "axios";
 import PieApp from '../components/PieApp';
-import {
-  PieChart,
-  Pie,
-  Tooltip,
-} from "recharts";
+
 
 const App = () => {
   const [pokemon, setPokemon] = useState("pikachu");
