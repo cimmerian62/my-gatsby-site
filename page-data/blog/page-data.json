@@ -1,0 +1,5 @@
+{
+    "componentChunkName": "component---src-pages-blog-index-js",
+    "path": "/blog/",
+    "result": {"data":{"allMdx":{"nodes":[{"frontmatter":{"date":"January 1, 2012","title":"Third Post"},"id":"b9390152-0258-531b-99a5-d8f47bef6ecd","slug":"third-post/"},{"frontmatter":{"date":"August 25, 2008","title":"Second Post"},"id":"be50f849-ad90-585e-9b2e-0ba168cbfbf9","slug":"second-post/"},{"frontmatter":{"date":"December 15, 2006","title":"First Post"},"id":"56314f4c-39a4-5ec3-a97a-b67c78c10b11","slug":"first-post/"}]}},"pageContext":{}},
+    "staticQueryHashes": ["3159585216","610745074"]}
